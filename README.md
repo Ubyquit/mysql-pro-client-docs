@@ -6,8 +6,8 @@
 
 ### The all-in-one MySQL client for Visual Studio Code
 
-![Version](https://img.shields.io/badge/version-2.1.0-0ea5e9?style=for-the-badge)
-![Tests](https://img.shields.io/badge/tests-80%20passing-22c55e?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-2.2.0-0ea5e9?style=for-the-badge)
+![Tests](https://img.shields.io/badge/tests-85%20passing-22c55e?style=for-the-badge)
 ![Price](https://img.shields.io/badge/price-free-8b5cf6?style=for-the-badge)
 
 **Built by OpSET México**
@@ -26,6 +26,16 @@
 | Query Results | SQL → ER | Schema Compare | Table Designer |
 | History & Favorites | Live ER Preview | Safety Controls | Backup / Restore |
 | Stored Routines | FK Visualization | Migration SQL | CSV / JSON Import |
+
+## ⚡ Smart Batch Execution & Action Output
+
+Run complete SQL scripts without flooding the workspace with one tab per DDL/DML statement. MySQL Pro Client 2.2.0 consolidates operational feedback into one Action Output panel while preserving dedicated Query Results for statements that return rows.
+
+- Statement-by-statement success/error tracking
+- Rows affected or returned
+- Execution timing
+- Stop-on-error visibility
+- Copy SQL for any logged statement
 
 ## ⚡ Query without leaving VS Code
 

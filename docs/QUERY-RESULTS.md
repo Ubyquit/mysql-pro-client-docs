@@ -42,3 +42,8 @@ La coma representa AND. Los nombres de columnas no distinguen mayúsculas/minús
 La extensión utiliza `SQL_SELECT_LIMIT` dentro de un ámbito seguro de conexión. El SQL del usuario no se reescribe ingenuamente agregando `LIMIT` al final.
 
 Cuando se alcanza el límite, puedes elegir **Load More** o ejecutar explícitamente sin límite si realmente lo necesitas.
+
+
+## Query Results vs Action Output
+
+For multi-statement execution, row-producing SQL uses Query Results while operational DDL/DML feedback is consolidated in the Action Output panel. Single-statement execution keeps the traditional Query Results behavior.

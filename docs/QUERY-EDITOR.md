@@ -62,3 +62,8 @@ Snippets incluidos: `SEL`, `SELW`, `SELJ`, `UPD`, `UPDJ`, `INS`, `DEL`, `GRO`, `
 ## Mutaciones
 
 `UPDATE` y `DELETE` sin un `WHERE` de nivel superior activan una advertencia especial cuando la protección está habilitada.
+
+
+## Smart Batch Execution
+
+When a selection or **Run All** contains multiple statements, MySQL Pro Client consolidates DDL/DML/session feedback into **Action Output**. Statements returning rows still open dedicated Query Results panels. This prevents large setup and migration scripts from creating dozens of result tabs.

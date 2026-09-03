@@ -1,6 +1,6 @@
 # Documentation Hub
 
-Esta carpeta contiene la documentación modular de MySQL Pro Client 2.1.0.
+Esta carpeta contiene la documentación modular de MySQL Pro Client 2.2.0.
 
 ## Ruta recomendada
 
@@ -9,7 +9,7 @@ GETTING-STARTED
       ↓
 DATABASE-EXPLORER
       ↓
-QUERY-EDITOR ──→ QUERY-RESULTS
+QUERY-EDITOR ──→ QUERY-RESULTS ──→ ACTION-OUTPUT
       ↓
 ER-DIAGRAMS / VISUAL-EXPLAIN
       ↓
@@ -28,6 +28,7 @@ SECURITY / TROUBLESHOOTING
 - `DATABASE-EXPLORER.md` — navegación y acciones por objeto.
 - `QUERY-EDITOR.md` — ejecución, parser, CodeLens e IntelliSense.
 - `QUERY-RESULTS.md` — grid, filtros, exportación y límites.
+- `ACTION-OUTPUT.md` — ejecución por lotes consolidada para scripts grandes.
 - `ER-DIAGRAMS.md` — ER desde database, SQL y Live Preview.
 - `VISUAL-EXPLAIN.md` — plan de ejecución visual.
 - `DATA-EDITOR.md` — edición segura de filas.

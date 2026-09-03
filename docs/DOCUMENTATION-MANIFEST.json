@@ -1,8 +1,9 @@
 {
   "product": "MySQL Pro Client",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "publisher": "opset-mexico",
   "documentation_files": [
+    "ACTION-OUTPUT.md",
     "BACKUP-RESTORE.md",
     "DATA-EDITOR.md",
     "DATABASE-EXPLORER.md",

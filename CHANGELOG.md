@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.2.0] - 2026-09-03
+
+- Added Smart Batch Execution and consolidated Action Output.
+- Multi-statement DDL/DML no longer floods VS Code with one result tab per statement.
+- Row-producing statements continue to open dedicated Query Results.
+- Added statement status, output, timing and Copy SQL actions.
+- Automated suite increased to 85 tests.
+
 ## [2.1.0] - 2026-09-03
 
 - Editor SQL ahora interpreta `DELIMITER` como directiva de cliente para crear procedures/functions/triggers/events sin enviarla al servidor.
