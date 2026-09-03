@@ -1,0 +1,32 @@
+{
+  "product": "MySQL Pro Client",
+  "version": "2.1.0",
+  "publisher": "opset-mexico",
+  "documentation_files": [
+    "BACKUP-RESTORE.md",
+    "DATA-EDITOR.md",
+    "DATABASE-EXPLORER.md",
+    "ER-DIAGRAMS.md",
+    "GETTING-STARTED.md",
+    "IMPORT-EXPORT.md",
+    "KEYBOARD-SHORTCUTS.md",
+    "QUERY-EDITOR.md",
+    "QUERY-RESULTS.md",
+    "README.md",
+    "SCHEMA-COMPARE.md",
+    "SCREENSHOT-PLAYBOOK.md",
+    "SECURITY.md",
+    "STORED-ROUTINES.md",
+    "TABLE-DESIGNER.md",
+    "TROUBLESHOOTING.md",
+    "VISUAL-EXPLAIN.md"
+  ],
+  "real_screenshots_included": [
+    "stored-procedure-form.png",
+    "stored-procedure-result.png"
+  ],
+  "notes": [
+    "No repository URL was invented. Root README remains vsce-safe by avoiding relative Markdown links/images until package.json.repository is configured.",
+    "No license was invented because the uploaded repository does not contain a LICENSE file."
+  ]
+}
