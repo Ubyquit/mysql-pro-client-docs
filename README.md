@@ -6,8 +6,8 @@
 
 ### The all-in-one MySQL client for Visual Studio Code
 
-![Version](https://img.shields.io/badge/version-2.2.0-0ea5e9?style=for-the-badge)
-![Tests](https://img.shields.io/badge/tests-85%20passing-22c55e?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-2.5.1-0ea5e9?style=for-the-badge)
+![Tests](https://img.shields.io/badge/tests-101%20expected-22c55e?style=for-the-badge)
 ![Price](https://img.shields.io/badge/price-free-8b5cf6?style=for-the-badge)
 
 **Built by OpSET México**
@@ -25,17 +25,33 @@
 | Smart SQL Editor | ER Diagrams | Visual EXPLAIN | Data Editor |
 | Query Results | SQL → ER | Schema Compare | Table Designer |
 | History & Favorites | Live ER Preview | Safety Controls | Backup / Restore |
-| Stored Routines | FK Visualization | Migration SQL | CSV / JSON Import |
+| Stored Routines | ER Groups & Styling | Migration SQL | CSV / JSON Import |
+
+
+## 🎨 ER Diagram Experience 2.5
+
+MySQL Pro Client 2.5.1 turns the ER Diagram into a much more capable local modeling workspace:
+
+- Smooth pointer-captured table dragging with `requestAnimationFrame`, snap-to-grid, and stuck-drag protection.
+- Relationship routing modes: **Orthogonal**, **Straight**, and **Curved**.
+- Relationship styles: **Solid**, **Dashed**, and **Dotted**, with configurable thickness and color.
+- Custom table header/background/border/text colors, rounded or square corners, and per-table color overrides.
+- Visual **ER Groups** with names and colors; assign tables, move a whole group, hide/show, collapse/expand, and auto-arrange only that group.
+- Global Auto Layout remains available, while saved positions/groups are preserved locally per workspace and database.
+- PNG, PDF, and Advanced Export preserve the configured ER appearance and visible groups.
+- Shared WebView styling was refined for VS Code Dark, Light, and High Contrast themes.
+
+All group and appearance metadata is local to MySQL Pro Client. It never changes the MySQL schema.
 
 ## ⚡ Smart Batch Execution & Action Output
 
-Run complete SQL scripts without flooding the workspace with one tab per DDL/DML statement. MySQL Pro Client 2.2.0 consolidates operational feedback into one Action Output panel while preserving dedicated Query Results for statements that return rows.
+Run complete SQL scripts without flooding your VS Code workspace with one tab per DDL/DML statement.
 
-- Statement-by-statement success/error tracking
-- Rows affected or returned
-- Execution timing
-- Stop-on-error visibility
-- Copy SQL for any logged statement
+- Multi-statement `CREATE`, `ALTER`, `DROP`, `INSERT`, `UPDATE`, `DELETE`, `USE` and other non-row commands are consolidated into a single **Action Output** panel.
+- Row-producing statements still open dedicated **Query Results** tabs.
+- Action Output tracks statement number, status, command, rows affected/returned, execution time and the exact failing statement.
+- Batch execution stops on SQL errors or cancelled mutation-safety prompts while preserving the completed execution log.
+- Copy the SQL for any logged statement directly from Action Output.
 
 ## ⚡ Query without leaving VS Code
 
@@ -126,3 +142,9 @@ Use MySQL's official CLI tools with preview, tool discovery and reinforced confi
 **Built for developers. Designed for productivity.**
 
 </div>
+
+
+## Advanced Table Design & Reporting
+
+MySQL Pro Client 2.5.1 keeps the 2.4 **Visual Foreign Key Designer** and adds the new **ER Diagram Experience**: smoother drag interaction, orthogonal/straight/curved routing, customizable relationship styles, configurable table colors, visual groups, group movement/collapse/visibility, snap-to-grid, and persisted layouts. Advanced Export, composite keys, Table Designer safety, and the existing PNG/PDF flows remain available.
+

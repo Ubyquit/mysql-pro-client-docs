@@ -1,12 +1,113 @@
 # Changelog
 
+## [2.5.1] - 2026-09-05
+
+### Added
+
+- Clear state-aware eye icons for group visibility.
+- Split-button group layout control that visually binds Arrange with its Automatic/Horizontal/Vertical/Grid mode selector.
+- Dynamic layout icon and label reflecting the currently selected group layout mode.
+- New inward-arrow Fit Group to Contents icon for clearer intent.
+
+### Changed
+
+- Group action iconography now uses compact SVG controls that inherit VS Code theme colors.
+- Collapse/expand controls now use explicit panel-state icons while preserving the existing behavior and tooltips.
+- Group controls include improved ARIA labels and hover feedback for better discoverability and accessibility.
+
+### Fixed
+
+- Preserves the 2.5 group containment, elastic group sizing, layout modes, self-reference routing, group dragging and Auto Layout behavior while improving only the group-control UX.
+
+## [2.5.0] - 2026-09-05
+
+### Added
+
+- ER Diagram Experience customization panel with Appearance and Groups tabs.
+- Orthogonal, straight and curved relationship routing.
+- Solid, dashed and dotted relationship styles with configurable thickness and color.
+- Snap-to-grid with selectable 8/16/24/32 px grid sizes.
+- Global table appearance controls plus per-table color overrides.
+- Visual ER Groups with editable names/colors, table assignment, hide/show, collapse/expand, group dragging and group-only auto arrange.
+- Persistent ER positions, groups and table overrides per VS Code workspace/database.
+- Persistent global ER appearance preferences.
+- Six ER geometry regression tests (101 test definitions total).
+
+### Changed
+
+- ER Diagram Experience now scrolls internally while keeping its header and tabs fixed.
+- Mouse-wheel scrolling inside Customize no longer zooms the diagram underneath it.
+- Initial/Auto Layout now reserves a wider relationship channel and staggers hierarchy levels so foreign-key lines are visible immediately without manually moving tables.
+- Orthogonal routing now uses thickness-aware lead segments and obstacle clearance around table cards.
+- Table dragging now uses pointer capture, `requestAnimationFrame`, `translate3d`, pointer-cancel/lost-capture cleanup and deferred state persistence for smoother interaction.
+- ER refresh preserves the existing visual layout instead of discarding table positions.
+- PNG, PDF and Advanced Export now preserve relationship routing/style, table colors and ER Groups.
+- Shared WebView Design System updated to 2.5 with improved controls, scrollbars, focus, Dark/Light and High Contrast behavior.
+- Orthogonal routing is now the default ER relationship style.
+
+### Safety
+
+- ER groups and appearance metadata are local-only and never modify MySQL schema metadata.
+- Existing SQL Preview, mutation safety, connection safety and schema-change confirmations remain unchanged.
+
+## [2.4.0] - 2026-09-05
+
+### Added
+
+- Visual Foreign Key Designer inside Table Designer.
+- Live referenced schema/table/column metadata selectors.
+- Simple and composite foreign-key mappings with ordered local → referenced column pairs.
+- Visual ON DELETE / ON UPDATE controls for RESTRICT, CASCADE, SET NULL and NO ACTION.
+- Reference metadata badges/warnings and index-prefix validation before SQL is applied.
+- Self-referencing foreign keys use the current in-memory table design.
+- Four new Table Designer regression tests (94 tests total).
+
+### Safety
+
+- SET NULL is rejected when any mapped local column is NOT NULL.
+- Referenced columns are validated against available metadata and indexed left-most prefixes.
+- Existing SQL Preview and confirmation flow remain mandatory before schema changes are applied.
+
+## [2.3.0] - 2026-09-04
+
+### Added
+- Advanced Table Designer column controls: PK, BINARY, ZEROFILL, and VIRTUAL/STORED generated columns.
+- Composite primary keys directly from multiple PK checkboxes in the Columns grid.
+- Advanced Export from ER Diagram: one PDF can include syntax-highlighted SQL, the current ER Diagram, and optional latest Query Results.
+- Advanced report SQL source choices: current file, current selection, current statement, or no SQL.
+- Light/Print and Dark report themes.
+
+### Changed
+- PRIMARY KEY editing is synchronized between Columns and Indexes.
+- ZEROFILL automatically implies UNSIGNED and is identified as a legacy MySQL feature.
+- Generated-column validation now rejects incompatible DEFAULT and AUTO_INCREMENT combinations.
+- Automated Table Designer regression coverage expanded (90 tests total).
+
 ## [2.2.0] - 2026-09-03
 
-- Added Smart Batch Execution and consolidated Action Output.
-- Multi-statement DDL/DML no longer floods VS Code with one result tab per statement.
-- Row-producing statements continue to open dedicated Query Results.
-- Added statement status, output, timing and Copy SQL actions.
-- Automated suite increased to 85 tests.
+### Added
+
+- **Smart Batch Execution** for Run All and multi-statement selections.
+- New consolidated **Action Output** WebView for DDL, DML, session and other non-row statements.
+- Batch summary with executed/total statements, successes, errors, cancellations and cumulative SQL execution time.
+- Per-statement status, command, output, timing and Copy SQL action.
+- Dedicated Query Results are preserved for statements that return rows.
+- Batch execution records the failing or cancelled statement and stops safely while keeping previous successful output visible.
+- Five automated regression tests for batch statement classification and output entries (85 tests total).
+
+### Changed
+
+- Multi-statement scripts no longer create one Query Results tab for every `CREATE`, `INSERT`, `UPDATE`, `DELETE`, `DROP`, `USE`, or similar statement.
+- `Run All` now behaves like a professional script runner: operational output is consolidated while actual row sets remain individually inspectable.
+- WebView security/design audit now covers 13 panels, including Action Output.
+
+
+
+## 2.1.1 — Connection Form Hotfix
+
+- Fixed Connection Form buttons being blocked by the WebView Content Security Policy in the packaged Marketplace extension.
+- Replaced inline HTML event handlers with nonce-authorized JavaScript event listeners.
+- Added a WebView verification rule that fails the build if inline event-handler attributes are introduced again.
 
 ## [2.1.0] - 2026-09-03
 
